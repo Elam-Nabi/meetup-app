@@ -8,7 +8,7 @@
     * Har skapat en .js fil på api sidan där jag gör mina get, post, req. 
     * dist mapp skapades när jag körde kommandot npm run build, vilket gjorde att jag kunde deploya.
 
-# Vilka program jag har använt mig av för att kunna deploya min app(till en monltjänst)
+# Vilka program jag har använt mig av för att kunna deploya min app(till en molntjänst):
 
 * Heroku
 * Docker
