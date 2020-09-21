@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/meetups",
-    name: "meetups",
-    component: () => import("@/views/Meetups.vue"),
+    path: "/meetup/create",
+    name: "meetup-create",
+    component: () => import("@/views/MeetupCreate.vue"),
   },
 ]
 

@@ -4,10 +4,10 @@
     :style="{ backgroundImage: `url(${require('../assets/firstpagepic.jpg')})` }"
   >
     <div class="button-header">
-      <router-link to="/meetups">Good Vibes Only</router-link>
       <h1>
-        Hey you! Why don't you click the button
-        <span>above?</span>
+        Hey you! Why don't you
+        <span>join</span> us?
+        <router-link to="/meetups">Good Vibes Only</router-link>
       </h1>
     </div>
   </header>
@@ -33,20 +33,22 @@ export default {};
     background: rgba(#a7e4db75, 0.5);
   }
   .button-header {
+    margin: 110px;
     width: 100%;
-    margin: auto;
-    max-width: 360px;
+    max-width: 340px;
     text-align: center;
     position: relative;
     a {
+      width: 250px;
       color: #fff;
       display: block;
       padding: 1rem 0;
       transition: 0.3s;
-      font-size: 1.6rem;
+      margin: 25px;
+      font-size: 1.2rem;
       border-radius: 5px;
       font-weight: bolder;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       text-decoration: none;
       background: #d3b9b9;
       text-transform: uppercase;
@@ -68,6 +70,11 @@ export default {};
         color: #d3b9b9;
         font-size: 1.8rem;
       }
+    }
+    .hearth-image {
+      width: 500px;
+      display: flex;
+      align-self: flex-end;
     }
   }
 }
