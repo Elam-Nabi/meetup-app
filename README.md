@@ -15,12 +15,12 @@
 
 # Vilket molntjänst jag har deploya till, samt vilka kommandon jag körde:
 
-* Heroku
- *heroku container:login('heroku login' ifall du inte är inloggad på heroku)* - **du loggar in på heroku med din docker-container** 
- *heroku create .* - **den lokala applikationen skickas(pushas) in i heroku applikationen**
- *docker tag registry.heroku.com//web* - **taggar imagen innan den pushas till heroku**
- *docker push registry.heroku.com//web* - **pushar imagen till heroku**
- *heroku container:release web* - **släpper imagen till applikationen**
- *heroku open* - **applikationen öppnas i webbläsaren**
+* Heroku - Hur jag deployade min applikation
+ * heroku container:login('heroku login' ifall du inte är inloggad på heroku) - du loggar in på heroku med din docker-container
+ * heroku create . -den lokala applikationen skickas(pushas) in i heroku applikationen
+ * docker tag registry.heroku.com//web - **taggar imagen innan den pushas till heroku
+ * docker push registry.heroku.com//web* - pushar imagen till heroku
+ * heroku container:release web - släpper imagen till applikationen
+ * heroku open - applikationen öppnas i webbläsaren
 
 
