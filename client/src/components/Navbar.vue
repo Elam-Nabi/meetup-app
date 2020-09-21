@@ -26,20 +26,20 @@ export default {};
   justify-content: space-between;
 
   .create-text {
-    margin-right: 100px;
-    padding: 10px;
-    text-decoration: none;
     color: #fff;
-    letter-spacing: 1px;
-    background: #d3b9b9;
-    border-radius: 5px;
+    padding: 10px;
     transform: 2s;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    margin-right: 100px;
+    text-decoration: none;
+    background: #d3b9b9;
     &:hover {
-      background: #fff;
-      color: #d3b9b9;
-      font-weight: bolder;
-      transition: 0.5s;
       opacity: 0.7;
+      transition: 0.5s;
+      color: #d3b9b9;
+      background: #fff;
+      font-weight: bolder;
     }
   }
 }

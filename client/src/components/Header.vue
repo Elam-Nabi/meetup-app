@@ -33,18 +33,18 @@ export default {};
     background: rgba(#a7e4db75, 0.5);
   }
   .button-header {
-    margin: 110px;
     width: 100%;
+    margin: 110px;
     max-width: 340px;
     text-align: center;
     position: relative;
     a {
       width: 250px;
+      margin: 25px;
       color: #fff;
       display: block;
       padding: 1rem 0;
       transition: 0.3s;
-      margin: 25px;
       font-size: 1.2rem;
       border-radius: 5px;
       font-weight: bolder;
@@ -54,10 +54,10 @@ export default {};
       text-transform: uppercase;
       &:hover {
         opacity: 0.7;
+        transform: scale(1.2);
         transform: translateX(15px);
         border-radius: 35px 0 35px 0;
         box-shadow: 3px 3px rgb(160, 79, 79);
-        transform: scale(1.2);
       }
     }
     h1 {
