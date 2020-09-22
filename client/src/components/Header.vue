@@ -23,15 +23,6 @@ export default {};
   display: flex;
   padding: 0 1rem;
   background: no-repeat center center/cover;
-  &::before {
-    top: 0;
-    right: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(#a7e4db75, 0.5);
-  }
   .button-header {
     width: 100%;
     margin: 110px;
@@ -70,11 +61,6 @@ export default {};
         color: #d3b9b9;
         font-size: 1.8rem;
       }
-    }
-    .hearth-image {
-      width: 500px;
-      display: flex;
-      align-self: flex-end;
     }
   }
 }

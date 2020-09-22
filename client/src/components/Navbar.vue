@@ -15,13 +15,13 @@ export default {};
 
 <style lang="scss" scoped>
 .nav {
-  z-index: 3;
+  top: 0;
   width: 100%;
   height: 60px;
   margin: 10px;
   display: flex;
   padding: 0 3rem;
-  position: fixed;
+  position: absolute;
   align-items: center;
   justify-content: space-between;
 
@@ -29,9 +29,9 @@ export default {};
     color: #fff;
     padding: 10px;
     transform: 2s;
+    margin-right: 10px;
     border-radius: 5px;
     letter-spacing: 1px;
-    margin-right: 100px;
     text-decoration: none;
     background: #d3b9b9;
     &:hover {
@@ -43,7 +43,6 @@ export default {};
     }
   }
 }
-
 .home {
   img {
     border-radius: 50%;
