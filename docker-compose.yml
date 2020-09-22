@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   client:
     container_name: web_client
@@ -13,16 +14,17 @@ services:
     volumes:
       - ./client
     links:
-      - api
-  api:
-    container_name: web_api
+      - server
+
+  server:
+    container_name: web_server
     build:
-      context: ./api
+      context: ./server
       dockerfile: Dockerfile
-    image: meetup-app/api
+    image: meetup-app/server
     ports:
       - "5000:5000"
     expose:
       - "5000"
     volumes:
-      - ./api
+      - ./server

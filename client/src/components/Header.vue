@@ -5,7 +5,7 @@
   >
     <div class="button-header">
       <h1>
-        Hey you! Why don't you
+        Hey you! Discover events for all the things you love, and maybe
         <span>join</span> us?
         <router-link to="/meetups">Good Vibes Only</router-link>
       </h1>
@@ -56,7 +56,7 @@ export default {};
       margin-top: 1rem;
       font-size: 1.7rem;
       letter-spacing: 1px;
-      text-shadow: 2px 2px 2px rgba(#000, 0.3);
+      text-shadow: 2px 2px 2px rgba(#000, 0.6);
       span {
         color: #d3b9b9;
         font-size: 1.8rem;
