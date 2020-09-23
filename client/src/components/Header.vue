@@ -1,7 +1,9 @@
 <template>
   <header
     class="header-pic"
-    :style="{ backgroundImage: `url(${require('../assets/firstpagepic.jpg')})` }"
+    :style="{
+      backgroundImage: `url(${require('../assets/firstpagepic.jpg')})`,
+    }"
   >
     <div class="button-header">
       <h1>
@@ -19,10 +21,10 @@ export default {};
 
 <style lang="scss" scoped>
 .header-pic {
-  height: 100vh;
+  width: 100vw;
   display: flex;
   padding: 0 1rem;
-  background: no-repeat center center/cover;
+  background: no-repeat center center;
   .button-header {
     width: 100%;
     margin: 110px;
