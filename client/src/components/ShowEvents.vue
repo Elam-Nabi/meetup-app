@@ -4,8 +4,11 @@
     <section>
       <div v-for="event in events.meetupEvents" :key="event.id">
         <img class="pictures" :src="event.eventImage" alt="image" />
-        <span class="date">{{ event.eventDate | moment('dddd, MMMM Do YYYY ') }}</span>
-        <h3 class="title">{{ event.eventTitle }}</h3>
+        <span class="date">{{
+          event.eventDate | moment("dddd, MMMM Do YYYY ")
+        }}</span>
+        <h4>{{ event.eventPhrase }}</h4>
+        <h5 class="title">{{ event.eventTitle }}</h5>
         <span class="attendees">Attendees: {{ event.attendees }}</span>
       </div>
     </section>
@@ -22,9 +25,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(
-        "https://meetup-elam-app.herokuapp.com/meetups"
-      );
+      const res = await axios.get("http://localhost:5000/meetups");
       this.events = res.data;
     } catch (error) {
       this.error = "Something went wrong!";
@@ -35,38 +36,42 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
+  padding: 20px;
   color: #d3b9b9;
   font-size: 1.8rem;
   letter-spacing: 1px;
   text-shadow: 2px 2px 2px rgba(#000, 0.2);
-  padding: 20px;
 }
-// .section {
-//   width: 100%;
-//   display: grid;
-//   background: #e9e9e9;
-
-//   .pictures {
-//     border-radius: 5px;
-//     border: 1px solid rgba(46, 62, 72, 0.12);
-//   }
-// }
-// .title,
-// .date,
-// .attendees {
-//   display: block;
-//   padding: 4px;
-//   letter-spacing: 2px;
-// }
 
 section {
-  gap: 6rem 0;
+  gap: 5rem 0;
   width: 100%;
   display: grid;
 
   div {
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid rgb(194, 194, 194);
+
     img {
       width: 100%;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    .date {
+      color: gray;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .title {
+      font-size: 0.8rem;
+      font-weight: 100;
+    }
+
+    .attendees {
+      font-size: 0.8rem;
     }
   }
 }
