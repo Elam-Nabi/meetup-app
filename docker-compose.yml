@@ -2,7 +2,7 @@ version: "3"
 
 services:
   client:
-    container_name: web_client
+    container_name: client_web
     build:
       context: ./client
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
       - server
 
   server:
-    container_name: web_server
+    container_name: server_web
     build:
       context: ./server
       dockerfile: Dockerfile
