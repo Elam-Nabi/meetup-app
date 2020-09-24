@@ -46,6 +46,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
   padding: 13px;
+  margin: 10px;
   color: #d3b9b9;
   font-size: 1.8rem;
   text-align: center;
@@ -54,10 +55,12 @@ h1 {
 }
 
 section {
-  gap: 5rem 0;
-  width: 100%;
+  width: 70%;
+  gap: 5rem 4;
   margin: auto;
   display: grid;
+  align-self: center;
+  align-items: center;
 
   div {
     cursor: pointer;

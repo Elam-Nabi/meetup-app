@@ -21,10 +21,10 @@ export default {};
 
 <style lang="scss" scoped>
 .header-pic {
-  width: 100vw;
+  width: 100%;
   display: flex;
-  padding: 0 1rem;
-  background: no-repeat center center;
+  margin: auto;
+  background: no-repeat center;
   .button-header {
     width: 100%;
     margin: 110px;
