@@ -10,7 +10,7 @@
         <h1>
           Hey you! Discover events for all the things you love, and maybe
           <span>join</span> us?
-          <router-link to="/meetups">Good Vibes Only</router-link>
+          <router-link :to="toPage">Good Vibes Only</router-link>
         </h1>
       </div>
     </div>
@@ -18,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      toPage: "/meetup/meetupslogin",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
