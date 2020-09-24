@@ -1,17 +1,16 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import Header from '../../src/components/Header.vue'
 
 describe('Header', () => {
 
-    test('Should check if the path is correct when button is clicked', async () => {
+    test('Should check if the path is correct on router link', () => {
+
         const wrapper = shallowMount(Header, {
-            stubs: [
-                'router-link'
-            ]
+            stubs: {
+                RouterLink: RouterLinkStub
+            }
         })
-        const button = wrapper.find('.button-header');
-        await button.trigger('click')
-        expect(wrapper.vm.toPage).toBe('/meetup/meetupslogin');
+        expect(wrapper.find(RouterLinkStub).props().to).toBe('/meetup/meetupslogin')
     })
 
 });
