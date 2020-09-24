@@ -16,6 +16,11 @@ const routes = [
     props: true,
     component: () => import("@/views/MeetupCreate.vue"),
   },
+  {
+    path: "/meetup/meetupslogin",
+    name: "meetupslogin",
+    component: () => import("@/views/MeetupsLogin.vue"),
+  },
 ]
 
 const router = new VueRouter({

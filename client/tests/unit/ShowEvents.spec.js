@@ -7,7 +7,7 @@ jest.mock("axios", () => ({
 
 describe("ShowEvents", () => {
     it("Should get first event, when mocking the axios call", () => {
-        var wrapper = shallowMount(ShowEvents);
+        const wrapper = shallowMount(ShowEvents);
         wrapper.vm.$nextTick(() => {
             expect(wrapper.vm.events.length).toBe(1);
         });
