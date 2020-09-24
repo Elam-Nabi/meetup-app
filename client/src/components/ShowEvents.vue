@@ -47,11 +47,11 @@ export default {
 h1 {
   padding: 13px;
   margin: 10px;
-  color: #d3b9b9;
+  color: #e9e9e9;
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 2px rgba(#000, 0.2);
+  text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.8);
 }
 
 section {

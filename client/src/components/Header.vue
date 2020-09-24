@@ -5,12 +5,14 @@
       backgroundImage: `url(${require('../assets/firstpagepic.jpg')})`,
     }"
   >
-    <div class="button-header">
-      <h1>
-        Hey you! Discover events for all the things you love, and maybe
-        <span>join</span> us?
-        <router-link to="/meetups">Good Vibes Only</router-link>
-      </h1>
+    <div class="text-btn-container">
+      <div class="button-header">
+        <h1>
+          Hey you! Discover events for all the things you love, and maybe
+          <span>join</span> us?
+          <router-link to="/meetups">Good Vibes Only</router-link>
+        </h1>
+      </div>
     </div>
   </header>
 </template>
@@ -25,9 +27,13 @@ export default {};
   display: flex;
   margin: auto;
   background: no-repeat center;
+
+  .text-btn-container {
+    margin-left: 60px;
+  }
   .button-header {
     width: 100%;
-    margin: 110px;
+    margin: 100px;
     max-width: 340px;
     text-align: center;
     position: relative;
@@ -54,11 +60,12 @@ export default {};
       }
     }
     h1 {
-      color: #fff;
+      color: #f3f7fa;
       margin-top: 1rem;
       font-size: 1.7rem;
+      background: #fff;
       letter-spacing: 1px;
-      text-shadow: 2px 2px 2px rgba(#000, 0.6);
+      text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.7);
       span {
         color: #d3b9b9;
         font-size: 1.8rem;
