@@ -36,26 +36,27 @@ export default {
 
   .item-containers {
     margin-left: 30px;
+    margin: 100px;
   }
 
   .card-date {
     color: gray;
-    display: block;
     padding: 30px;
+    display: block;
     margin-top: 90px;
     margin-left: -20px;
   }
 
   .title-text {
-    font-size: 1.7rem;
-    font-weight: bolder;
     display: block;
+    font-size: 1.7rem;
     margin-top: -23px;
+    font-weight: bolder;
   }
 
   .name {
-    display: block;
     padding: 10px;
+    display: block;
 
     span {
       display: block;
@@ -74,15 +75,15 @@ export default {
   }
 
   .details-text {
+    width: 40%;
     display: block;
     margin-top: 25px;
     letter-spacing: 1px;
-    width: 40%;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .attendees {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 }
 </style>

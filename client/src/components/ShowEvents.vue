@@ -46,18 +46,21 @@ export default {
 <style lang="scss" scoped>
 h1 {
   padding: 13px;
-  color: #d3b9b9;
+  margin: 10px;
+  color: #e9e9e9;
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 2px rgba(#000, 0.2);
+  text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.8);
 }
 
 section {
-  gap: 5rem 0;
-  width: 100%;
+  width: 70%;
+  gap: 5rem 4;
   margin: auto;
   display: grid;
+  align-self: center;
+  align-items: center;
 
   div {
     cursor: pointer;
