@@ -19,12 +19,17 @@
       <p class="details">Details</p>
       <span class="details-text"> {{ event.eventText }}</span>
       <span class="attendees"> Attendees ({{ event.attendees }})</span>
+      <Review />
     </div>
   </div>
 </template>
 
 <script>
+import Review from "@/components/Review.vue";
 export default {
+  components: {
+    Review,
+  },
   props: ["event"],
 };
 </script>
