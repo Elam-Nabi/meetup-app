@@ -46,7 +46,7 @@ export default {
     a {
       width: 250px;
       margin: 25px;
-      color: #fff;
+      color: #000;
       display: block;
       padding: 1rem 0;
       transition: 0.3s;
@@ -55,25 +55,25 @@ export default {
       font-weight: bolder;
       letter-spacing: 1px;
       text-decoration: none;
-      background: #d3b9b9;
+      background: #aa8817;
       text-transform: uppercase;
       &:hover {
         opacity: 0.7;
         transform: scale(1.2);
         transform: translateX(15px);
-        border-radius: 35px 0 35px 0;
-        box-shadow: 3px 3px rgb(160, 79, 79);
+        border-radius: 37px 0 37px 0;
+        box-shadow: 3px 3px rgb(48, 43, 43);
       }
     }
     h1 {
-      color: #f3f7fa;
+      color: #000;
       margin-top: 1rem;
       font-size: 1.7rem;
       background: #fff;
       letter-spacing: 1px;
-      text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.7);
+      text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.3);
       span {
-        color: #d3b9b9;
+        color: #aa8817;
         font-size: 1.8rem;
       }
     }
