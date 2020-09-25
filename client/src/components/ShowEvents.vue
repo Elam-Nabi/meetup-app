@@ -47,11 +47,11 @@ export default {
 h1 {
   padding: 13px;
   margin: 10px;
-  color: #e9e9e9;
+  color: #000;
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.8);
+  text-shadow: 2px 2px 2px rgba(rgb(0, 0, 0), 0.3);
 }
 
 section {
@@ -61,6 +61,7 @@ section {
   display: grid;
   align-self: center;
   align-items: center;
+  text-align: center;
 
   div {
     cursor: pointer;
@@ -71,7 +72,7 @@ section {
       transform: scale(1.5);
       transition: all 0.4s ease;
       transform: translateY(-15px);
-      box-shadow: 3px 3px 3px rgb(148, 142, 142);
+      box-shadow: 3px 3px 3px #aa8817;
     }
 
     img {
@@ -89,7 +90,7 @@ section {
     }
 
     .date {
-      color: gray;
+      color: #aa8817;
       font-weight: bold;
       font-size: 0.8rem;
     }
@@ -101,7 +102,6 @@ section {
     .title {
       font-size: 0.8rem;
       font-weight: 800;
-      color: rgb(145, 142, 142);
     }
 
     .attendees {

@@ -3,7 +3,7 @@
     v-if="event"
     class="card-container"
     :style="{
-      backgroundImage: `url(${require('../assets/flowers.jpg')})`,
+      backgroundImage: `url(${require('../assets/bird.jpg')})`,
     }"
   >
     <div class="item-containers">
@@ -40,7 +40,7 @@ export default {
   }
 
   .card-date {
-    color: gray;
+    color: #aa8817;
     padding: 30px;
     display: block;
     margin-top: 90px;
@@ -59,6 +59,7 @@ export default {
     display: block;
 
     span {
+      color: #aa8817;
       display: block;
       font-weight: bold;
     }
@@ -78,6 +79,7 @@ export default {
     width: 40%;
     display: block;
     margin-top: 25px;
+    color: #aa8817;
     letter-spacing: 1px;
     margin-bottom: 80px;
   }
