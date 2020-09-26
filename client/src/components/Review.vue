@@ -1,5 +1,10 @@
 <template>
   <div class="form-container">
+    <ul>
+      <li v-for="(error, index) in errors" :key="index">
+        {{ error }}
+      </li>
+    </ul>
     <form class="review-form" @submit.prevent="onSubmit">
       <p>
         <label for="name">Name:</label>
@@ -39,16 +44,25 @@ export default {
       errors: [],
     };
   },
-  method: {
+  methods: {
     onSubmit() {
-      if (this.name && this.review && this.rating) {
+      this.errors = [];
+      if (!this.name) {
+        this.errors.push("Name required");
+      }
+      if (!this.review) {
+        this.errors.push("Review required.");
+      }
+      if (!this.rating) {
+        this.errors.push("Rating required.");
+      }
+      if (this.errors.length > 0) return;
+
+      if (!this.errors.length) {
+        console.log("submitted");
         this.name = null;
         this.review = null;
         this.rating = null;
-      } else {
-        if (!this.name) this.errors.push("Name required.");
-        if (!this.review) this.errors.push("Review required.");
-        if (!this.rating) this.errors.push("Rating required.");
       }
     },
   },
