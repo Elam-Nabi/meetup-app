@@ -77,7 +77,7 @@ export default {
           id: Date.now(),
           input: this.input,
         });
-        this.input = [];
+        this.input = {};
       }
     },
   },
