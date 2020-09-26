@@ -8,17 +8,17 @@
     <form class="review-form" @submit.prevent="onSubmit">
       <p>
         <label for="name">Name:</label>
-        <input id="name" v-model="name" placeholder="name" />
+        <input id="name" v-model="input.name" placeholder="name" />
       </p>
 
       <p>
         <label for="review">Review:</label>
-        <textarea id="review" v-model="review"></textarea>
+        <textarea id="review" v-model="input.review"></textarea>
       </p>
 
       <p>
         <label for="rating">Rating:</label>
-        <select id="rating" v-model.number="rating">
+        <select id="rating" v-model.number="input.rating">
           <option>5</option>
           <option>4</option>
           <option>3</option>
@@ -31,40 +31,59 @@
         <input type="submit" value="Submit" />
       </p>
     </form>
+
+    <div id="review-container">
+      <ul>
+        <li v-for="(review, index) in reviewEvents" :key="index">
+          <h1>{{ review.input.name }}</h1>
+          <p>{{ review.input.review }}</p>
+          <p>{{ review.input.rating }}</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
-      name: null,
-      review: null,
-      rating: null,
+      input: {
+        name: [],
+        review: [],
+        rating: [],
+      },
       errors: [],
     };
   },
+
   methods: {
     onSubmit() {
       this.errors = [];
-      if (!this.name) {
+      if (!this.input.name) {
         this.errors.push("Name required");
       }
-      if (!this.review) {
+      if (!this.input.review) {
         this.errors.push("Review required.");
       }
-      if (!this.rating) {
+      if (!this.input.rating) {
         this.errors.push("Rating required.");
       }
-      if (this.errors.length > 0) return;
 
       if (!this.errors.length) {
         console.log("submitted");
-        this.name = null;
-        this.review = null;
-        this.rating = null;
+        this.$store.commit("ADD_REVIEW", {
+          id: Date.now(),
+          input: this.input,
+        });
+        this.input = [];
       }
     },
+  },
+
+  computed: {
+    ...mapState(["reviewEvents"]),
   },
 };
 </script>
