@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { mount, createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import MeetupCreate from '@/views/MeetupCreate.vue'
 
 const localVue = createLocalVue()
@@ -9,7 +9,12 @@ localVue.filter('moment', () => 'moment')
 
 const store = new Vuex.Store({
     state: {
-        reviewEvents: []
+        reviewEvents: [],
+        getters: {
+            currentReview: state => id => {
+                return state.reviewEvents.filter(review => review.id === id)
+            }
+        }
     }
 })
 
@@ -17,9 +22,15 @@ describe('MeetupCreate', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(MeetupCreate, {
+        wrapper = shallowMount(MeetupCreate, {
             store,
-            localVue
+            localVue,
+            propsData: {
+                event: {
+                    attendees: 20
+                }
+            }
+
         });
     });
 
@@ -34,5 +45,19 @@ describe('MeetupCreate', () => {
             }
         })
         expect(wrapper.vm.event.title).toBe('My name is Elam')
+    })
+
+    test('Should return number of attendees from prop', async () => {
+        await wrapper.setProps({
+            event: {
+                attendees: 20
+            }
+        })
+        expect(wrapper.vm.event.attendees).toBe(20)
+    })
+    test('Should increment attendees by one', async () => {
+        const addAttendee = wrapper.find('#attend')
+        await addAttendee.trigger('click')
+        expect(wrapper.vm.event.attendees).toBe(21)
     })
 }); 
