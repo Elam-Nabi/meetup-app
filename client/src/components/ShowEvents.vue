@@ -56,23 +56,22 @@ h1 {
 
 section {
   width: 70%;
-  gap: 5rem 4;
   margin: auto;
   display: grid;
-  align-self: center;
-  align-items: center;
-  text-align: center;
 
   div {
     cursor: pointer;
-    border-radius: 7px;
-    border: 1px solid rgb(223, 222, 222);
+
+    &:hover {
+      border-radius: 7px;
+      border: 1px solid rgb(207, 199, 199);
+    }
 
     &:hover {
       transform: scale(1.5);
       transition: all 0.4s ease;
       transform: translateY(-15px);
-      box-shadow: 3px 3px 3px #aa8817;
+      box-shadow: 3px 3px 3px rgb(10, 6, 6);
     }
 
     img {
@@ -112,7 +111,7 @@ section {
 
 @media screen and (min-width: 1024px) {
   section {
-    gap: 6rem 2rem;
+    gap: 4rem 2rem;
     grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -79,8 +79,8 @@ export default {
 
 <style lang="scss" scoped>
 .form-container {
-  margin: auto;
   width: 90%;
+  margin: auto;
   max-width: 560px;
 
   ::placeholder {
@@ -107,16 +107,16 @@ export default {
     border: 0;
     width: 200px;
     padding: 10px;
-    margin-top: 10px;
+    font-size: 1rem;
     font-size: 12px;
     cursor: pointer;
+    margin-top: 10px;
     color: #f5d67b;
     border-radius: 4px;
-    background: rgb(10, 6, 6);
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bolder;
-    font-size: 1rem;
+    background: rgb(10, 6, 6);
+    text-transform: uppercase;
 
     &:hover {
       opacity: 0.7;

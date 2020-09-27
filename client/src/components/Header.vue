@@ -35,7 +35,7 @@ export default {
   background: no-repeat center;
 
   .text-btn-container {
-    margin-left: 60px;
+    margin-left: 100px;
   }
   .button-header {
     width: 100%;
@@ -46,16 +46,16 @@ export default {
     a {
       width: 250px;
       margin: 25px;
-      color: #000;
       display: block;
       padding: 1rem 0;
       transition: 0.3s;
+      color: #f5d67b;
       font-size: 1.2rem;
       border-radius: 5px;
       font-weight: bolder;
       letter-spacing: 1px;
       text-decoration: none;
-      background: #aa8817;
+      background: rgb(10, 6, 6);
       text-transform: uppercase;
       &:hover {
         opacity: 0.7;
