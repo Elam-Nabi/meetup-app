@@ -18,8 +18,12 @@
       <img :src="event.eventImage" alt="image" />
       <p class="details">Details</p>
       <span class="details-text"> {{ event.eventText }}</span>
-      <span class="attendees"> Attendees ({{ event.attendees }})</span>
+      <span class="attendees">
+        Attendees ({{ event.attendees }})
+        <button id="attend" @click="event.attendees++">Attend</button>
+      </span>
       <Review />
+      <button @click="$router.go(-1)">back</button>
     </div>
   </div>
 </template>

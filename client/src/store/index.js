@@ -15,5 +15,10 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+  },
+  getters: {
+    currentReview: state => id => {
+      return state.reviewEvents.filter(review => review.id === id)
+    }
   }
 })

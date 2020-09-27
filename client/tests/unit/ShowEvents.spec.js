@@ -1,4 +1,4 @@
-import ShowEvents from '../../src/components/ShowEvents'
+import ShowEvents from '@/components/ShowEvents'
 import { shallowMount } from '@vue/test-utils'
 
 jest.mock("axios", () => ({
@@ -6,8 +6,13 @@ jest.mock("axios", () => ({
 }));
 
 describe("ShowEvents", () => {
+
+    let wrapper
+    beforeEach(() => {
+        wrapper = shallowMount(ShowEvents)
+    })
+
     it("Should get first event, when mocking the axios call", () => {
-        const wrapper = shallowMount(ShowEvents);
         wrapper.vm.$nextTick(() => {
             expect(wrapper.vm.events.length).toBe(1);
         });

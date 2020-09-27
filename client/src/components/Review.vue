@@ -27,7 +27,10 @@
 
     <div id="review-container">
       <ul>
-        <li v-for="(review, index) in reviewEvents" :key="index">
+        <li
+          v-for="(review, index) in currentReview($route.params.id)"
+          :key="index"
+        >
           <h3>Your review :</h3>
           <h1>{{ review.input.name }}</h1>
           <p>{{ review.input.review }}</p>
@@ -39,6 +42,7 @@
 
 <script>
 import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -63,7 +67,7 @@ export default {
       if (!this.errors.length) {
         console.log("submitted");
         this.$store.commit("ADD_REVIEW", {
-          id: Date.now(),
+          id: this.$route.params.id,
           input: this.input,
         });
         this.input = {};
@@ -73,6 +77,7 @@ export default {
 
   computed: {
     ...mapState(["reviewEvents"]),
+    ...mapGetters(["currentReview"]),
   },
 };
 </script>

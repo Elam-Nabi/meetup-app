@@ -10,7 +10,7 @@ describe('Header', () => {
                 RouterLink: RouterLinkStub
             }
         })
-        expect(wrapper.find(RouterLinkStub).props().to).toBe('/meetup/meetupslogin')
+        expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/meetup/meetupslogin')
     })
 
 });
