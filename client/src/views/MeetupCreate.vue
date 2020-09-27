@@ -20,6 +20,7 @@
       <span class="details-text"> {{ event.eventText }}</span>
       <span class="attendees"> Attendees ({{ event.attendees }})</span>
       <Review />
+      <button @click="$router.go(-1)">back</button>
     </div>
   </div>
 </template>
