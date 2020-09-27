@@ -1,5 +1,6 @@
 <template>
   <div class="form-container">
+    <h2>Write a review</h2>
     <ul>
       <li v-for="(error, index) in errors" :key="index">
         {{ error }}
@@ -7,24 +8,16 @@
     </ul>
     <form class="review-form" @submit.prevent="onSubmit">
       <p>
-        <label for="name">Name:</label>
-        <input id="name" v-model="input.name" placeholder="name" />
+        <input id="name" v-model="input.name" placeholder="Name" />
       </p>
 
       <p>
-        <label for="review">Review:</label>
-        <textarea id="review" v-model="input.review"></textarea>
-      </p>
-
-      <p>
-        <label for="rating">Rating:</label>
-        <select id="rating" v-model.number="input.rating">
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
+        <textarea
+          id="review"
+          v-model="input.review"
+          placeholder="Review"
+          style="resize: none"
+        ></textarea>
       </p>
 
       <p>
@@ -35,9 +28,9 @@
     <div id="review-container">
       <ul>
         <li v-for="(review, index) in reviewEvents" :key="index">
+          <h3>Your review :</h3>
           <h1>{{ review.input.name }}</h1>
           <p>{{ review.input.review }}</p>
-          <p>{{ review.input.rating }}</p>
         </li>
       </ul>
     </div>
@@ -50,9 +43,8 @@ export default {
   data() {
     return {
       input: {
-        name: [],
-        review: [],
-        rating: [],
+        name: null,
+        review: null,
       },
       errors: [],
     };
@@ -66,9 +58,6 @@ export default {
       }
       if (!this.input.review) {
         this.errors.push("Review required.");
-      }
-      if (!this.input.rating) {
-        this.errors.push("Rating required.");
       }
 
       if (!this.errors.length) {
@@ -89,4 +78,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.form-container {
+  margin: auto;
+  width: 90%;
+  max-width: 560px;
+
+  ::placeholder {
+    color: #aa8817;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  li {
+    margin: 1rem;
+    display: block;
+
+    p {
+      width: 40%;
+      margin-top: 5px;
+      color: #aa8817;
+      letter-spacing: 1px;
+    }
+  }
+
+  input[type="submit"] {
+    border: 0;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #f5d67b;
+    border-radius: 4px;
+    background: rgb(10, 6, 6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 0.7;
+      transition: 0.7s;
+    }
+  }
+
+  input,
+  textarea {
+    width: 70%;
+    padding: 10px 0px;
+    background: transparent;
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    color: #aa8817;
+    border-bottom: 0.5px solid #888;
+  }
+}
 </style>
