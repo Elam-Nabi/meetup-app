@@ -1,15 +1,21 @@
 import ShowEvents from '@/components/ShowEvents'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+
+const localVue = createLocalVue()
+localVue.filter('moment', () => 'moment')
 
 jest.mock("axios", () => ({
     get: () => Promise.resolve({ data: [{ val: 1 }] }),
 }));
 
+
 describe("ShowEvents", () => {
 
     let wrapper
     beforeEach(() => {
-        wrapper = shallowMount(ShowEvents)
+        wrapper = shallowMount(ShowEvents, {
+            localVue,
+        })
     })
 
     it("Should get first event, when mocking the axios call", () => {
