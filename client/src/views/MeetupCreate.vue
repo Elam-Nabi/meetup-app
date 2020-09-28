@@ -61,7 +61,7 @@ export default {
       font-size: 1rem;
       font-size: 12px;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 65px;
       color: #f5d67b;
       border-radius: 4px;
       letter-spacing: 1px;

@@ -6,37 +6,39 @@
         {{ error }}
       </li>
     </ul>
-    <form class="review-form" @submit.prevent="onSubmit">
-      <p>
-        <input id="name" v-model="input.name" placeholder="Name" />
-      </p>
+    <section class="user-actions">
+      <form class="review-form" @submit.prevent="onSubmit">
+        <p>
+          <input id="name" v-model="input.name" placeholder="Name" />
+        </p>
 
-      <p>
-        <textarea
-          id="review"
-          v-model="input.review"
-          placeholder="Review"
-          style="resize: none"
-        ></textarea>
-      </p>
+        <p>
+          <textarea
+            id="review"
+            v-model="input.review"
+            placeholder="Review"
+            style="resize: none"
+          ></textarea>
+        </p>
 
-      <p>
-        <input type="submit" value="Submit" />
-      </p>
-    </form>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </form>
 
-    <div id="review-container">
-      <ul>
-        <li
-          v-for="(review, index) in currentReview($route.params.id)"
-          :key="index"
-        >
-          <h3>Your review :</h3>
-          <h1>{{ review.input.name }}</h1>
-          <p>{{ review.input.review }}</p>
-        </li>
-      </ul>
-    </div>
+      <div id="review-container">
+        <ul>
+          <li
+            v-for="(review, index) in currentReview($route.params.id)"
+            :key="index"
+          >
+            <h3>Your review :</h3>
+            <h1>{{ review.input.name }}</h1>
+            <p>{{ review.input.review }}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -85,25 +87,16 @@ export default {
 <style lang="scss" scoped>
 .form-container {
   width: 90%;
-  margin: auto;
   max-width: 560px;
+  margin-top: 20px;
 
   ::placeholder {
     color: #aa8817;
   }
-
-  h3 {
-    margin-top: 10px;
+  .user-actions {
+    display: flex;
+    justify-content: space-between;
   }
-
-  #review-container {
-    display: grid;
-    li {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
   li {
     list-style-type: none;
   }
@@ -140,12 +133,12 @@ input[type="submit"] {
 input,
 textarea {
   border: 0;
-  width: 90%;
+  width: 200px;
   outline: none;
   font-size: 1rem;
   color: #aa8817;
   padding: 10px 0px;
   background: transparent;
-  border-bottom: 0.5px solid #888;
+  border-bottom: 1px solid #888;
 }
 </style>
