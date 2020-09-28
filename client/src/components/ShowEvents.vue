@@ -3,7 +3,7 @@
     <h1 class="event-text">Events in Stockholm, SE</h1>
     <section>
       <div
-        v-for="event in events.meetupEvents"
+        v-for="event in events"
         :key="event.id"
         @click="
           $router.push({

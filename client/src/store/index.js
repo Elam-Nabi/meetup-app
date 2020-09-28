@@ -5,11 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    reviewEvents: []
+    reviewEvents: [],
+    newEvents: []
   },
   mutations: {
     ADD_REVIEW(state, review) {
       state.reviewEvents.push(review)
+    },
+    ADD_EVENT(state, event) {
+      state.newEvents.push(event)
+      console.log(state.newEvents)
+      localStorage.setItem('newEvents', JSON.stringify(state.newEvents))
     }
   },
   actions: {
