@@ -96,49 +96,56 @@ export default {
     margin-top: 10px;
   }
 
+  #review-container {
+    display: grid;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   li {
-    margin: 1rem;
-    display: block;
-
-    p {
-      width: 40%;
-      margin-top: 5px;
-      color: #aa8817;
-      letter-spacing: 1px;
-    }
+    list-style-type: none;
   }
 
-  input[type="submit"] {
-    border: 0;
-    width: 200px;
-    padding: 10px;
-    font-size: 1rem;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: 10px;
-    color: #f5d67b;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    font-weight: bolder;
-    background: rgb(10, 6, 6);
-    text-transform: uppercase;
-
-    &:hover {
-      opacity: 0.7;
-      transition: 0.7s;
-    }
-  }
-
-  input,
-  textarea {
-    width: 70%;
-    padding: 10px 0px;
-    background: transparent;
-    font-size: 1rem;
-    border: 0;
-    outline: none;
+  p {
+    width: 40%;
+    margin-top: 5px;
     color: #aa8817;
-    border-bottom: 0.5px solid #888;
+    letter-spacing: 1px;
   }
+}
+
+input[type="submit"] {
+  border: 0;
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #f5d67b;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  background: rgb(10, 6, 6);
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+  }
+}
+
+input,
+textarea {
+  border: 0;
+  width: 90%;
+  outline: none;
+  font-size: 1rem;
+  color: #aa8817;
+  padding: 10px 0px;
+  background: transparent;
+  border-bottom: 0.5px solid #888;
 }
 </style>

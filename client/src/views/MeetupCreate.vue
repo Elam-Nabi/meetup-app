@@ -19,11 +19,11 @@
       <p class="details">Details</p>
       <span class="details-text"> {{ event.eventText }}</span>
       <span class="attendees">
-        Attendees ({{ event.attendees }})
+        Attendees <span>({{ event.attendees }})</span>
+        <Review />
+        <button class="back-btn" @click="$router.go(-1)">Back</button>
         <button id="attend" @click="event.attendees++">Attend</button>
       </span>
-      <Review />
-      <button @click="$router.go(-1)">back</button>
     </div>
   </div>
 </template>
@@ -40,19 +40,48 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
+  width: 100vw;
   height: 100vh;
   background: no-repeat center center/cover;
 
   .item-containers {
     margin-left: 30px;
     margin: 100px;
+
+    .back-btn {
+      margin: 10px;
+    }
+
+    .back-btn,
+    #attend {
+      border: 0;
+      width: 65px;
+      outline: none;
+      padding: 10px;
+      font-size: 1rem;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      color: #f5d67b;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      background: rgb(10, 6, 6);
+
+      &:hover {
+        transition: 0.7s;
+        border-radius: 30px 0px 30px 0px;
+      }
+    }
   }
 
   .card-date {
-    color: #aa8817;
     padding: 30px;
     display: block;
     margin-top: 90px;
+    color: #aa8817;
     margin-left: -20px;
   }
 
@@ -68,9 +97,9 @@ export default {
     display: block;
 
     span {
-      color: #aa8817;
       display: block;
       font-weight: bold;
+      color: #aa8817;
     }
   }
 
@@ -95,6 +124,10 @@ export default {
 
   .attendees {
     margin-top: 5px;
+
+    span {
+      font-weight: bolder;
+    }
   }
 }
 </style>
