@@ -21,7 +21,7 @@ function getMeetupEvents() {
         meetupEvents.push(events)
     }
 
-    return { meetupEvents }
+    return meetupEvents
 }
 
 module.exports = { getMeetupEvents }
