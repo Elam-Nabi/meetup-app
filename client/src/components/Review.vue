@@ -6,37 +6,39 @@
         {{ error }}
       </li>
     </ul>
-    <form class="review-form" @submit.prevent="onSubmit">
-      <p>
-        <input id="name" v-model="input.name" placeholder="Name" />
-      </p>
+    <section class="user-actions">
+      <form class="review-form" @submit.prevent="onSubmit">
+        <p>
+          <input id="name" v-model="input.name" placeholder="Name" />
+        </p>
 
-      <p>
-        <textarea
-          id="review"
-          v-model="input.review"
-          placeholder="Review"
-          style="resize: none"
-        ></textarea>
-      </p>
+        <p>
+          <textarea
+            id="review"
+            v-model="input.review"
+            placeholder="Review"
+            style="resize: none"
+          ></textarea>
+        </p>
 
-      <p>
-        <input type="submit" value="Submit" />
-      </p>
-    </form>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </form>
 
-    <div id="review-container">
-      <ul>
-        <li
-          v-for="(review, index) in currentReview($route.params.id)"
-          :key="index"
-        >
-          <h3>Your review :</h3>
-          <h1>{{ review.input.name }}</h1>
-          <p>{{ review.input.review }}</p>
-        </li>
-      </ul>
-    </div>
+      <div id="review-container">
+        <ul>
+          <li
+            v-for="(review, index) in currentReview($route.params.id)"
+            :key="index"
+          >
+            <h3>Your review :</h3>
+            <h1>{{ review.input.name }}</h1>
+            <p>{{ review.input.review }}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -85,60 +87,58 @@ export default {
 <style lang="scss" scoped>
 .form-container {
   width: 90%;
-  margin: auto;
   max-width: 560px;
+  margin-top: 20px;
 
   ::placeholder {
     color: #aa8817;
   }
-
-  h3 {
-    margin-top: 10px;
+  .user-actions {
+    display: flex;
+    justify-content: space-between;
   }
-
   li {
-    margin: 1rem;
-    display: block;
-
-    p {
-      width: 40%;
-      margin-top: 5px;
-      color: #aa8817;
-      letter-spacing: 1px;
-    }
+    list-style-type: none;
   }
 
-  input[type="submit"] {
-    border: 0;
-    width: 200px;
-    padding: 10px;
-    font-size: 1rem;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: 10px;
-    color: #f5d67b;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    font-weight: bolder;
-    background: rgb(10, 6, 6);
-    text-transform: uppercase;
-
-    &:hover {
-      opacity: 0.7;
-      transition: 0.7s;
-    }
-  }
-
-  input,
-  textarea {
-    width: 70%;
-    padding: 10px 0px;
-    background: transparent;
-    font-size: 1rem;
-    border: 0;
-    outline: none;
+  p {
+    width: 40%;
+    margin-top: 5px;
     color: #aa8817;
-    border-bottom: 0.5px solid #888;
+    letter-spacing: 1px;
   }
+}
+
+input[type="submit"] {
+  border: 0;
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #f5d67b;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  background: rgb(10, 6, 6);
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+  }
+}
+
+input,
+textarea {
+  border: 0;
+  width: 200px;
+  outline: none;
+  font-size: 1rem;
+  color: #aa8817;
+  padding: 10px 0px;
+  background: transparent;
+  border-bottom: 1px solid #888;
 }
 </style>

@@ -45,9 +45,9 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  padding: 13px;
   margin: 10px;
   color: #000;
+  padding: 13px;
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 1px;
@@ -61,17 +61,12 @@ section {
 
   div {
     cursor: pointer;
+    transition: all 0.4s ease;
 
     &:hover {
       border-radius: 7px;
-      border: 1px solid rgb(207, 199, 199);
-    }
-
-    &:hover {
-      transform: scale(1.5);
-      transition: all 0.4s ease;
-      transform: translateY(-15px);
-      box-shadow: 3px 3px 3px rgb(10, 6, 6);
+      transform: scale(1.03);
+      box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
     }
 
     img {
