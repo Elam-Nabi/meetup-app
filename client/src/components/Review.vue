@@ -31,6 +31,7 @@
           <li
             v-for="(review, index) in currentReview($route.params.id)"
             :key="index"
+            class="review-item"
           >
             <h3>Your review :</h3>
             <h1>{{ review.input.name }}</h1>
@@ -86,9 +87,15 @@ export default {
 
 <style lang="scss" scoped>
 .form-container {
-  width: 90%;
+  margin-left: -100px;
   max-width: 560px;
   margin-top: 20px;
+
+  h2 {
+    margin: 50px;
+    margin-left: 85px;
+    margin-top: 10px;
+  }
 
   ::placeholder {
     color: #aa8817;
@@ -99,6 +106,8 @@ export default {
   }
   li {
     list-style-type: none;
+    display: inline-block;
+    margin-right: -100px;
   }
 
   p {

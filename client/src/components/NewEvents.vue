@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div v-if="events">
     <h1 class="event-text">New Events, SE</h1>
     <section>
       <div
+        class="cards-firstpage"
         v-for="event in events"
         :key="event.id"
         @click="
@@ -38,4 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cards-firstpage {
+  height: 61%;
+}
 </style>
