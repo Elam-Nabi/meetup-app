@@ -4,6 +4,7 @@
     <input type="file" @change="imgFile" />
     <form @submit.prevent="addEvent">
       <input type="text" placeholder="title" v-model="input.title" />
+      <input type="name" placeholder="name" v-model="input.name" />
       <textarea
         placeholder="Describe event"
         v-model="input.description"
@@ -20,6 +21,7 @@ export default {
     return {
       input: {
         title: null,
+        name: null,
         description: null,
         date: null,
         attendees: 0,
@@ -37,6 +39,7 @@ export default {
       const newEvent = {
         id: Date.now(),
         eventImage: this.img,
+        eventName: this.input.name,
         eventDate: this.input.date,
         eventPhrase: this.input.description,
         eventTitle: this.input.title,

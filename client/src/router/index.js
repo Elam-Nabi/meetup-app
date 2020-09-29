@@ -14,7 +14,7 @@ const routes = [
     path: "/meetup/:id",
     name: "createmeet",
     props: true,
-    component: () => import("@/views/MeetupCreate.vue"),
+    component: () => import("@/views/MeetupCard.vue"),
   },
   {
     path: "/meetup/create",

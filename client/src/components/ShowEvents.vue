@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 h1 {
   margin: 10px;
   color: #000;
