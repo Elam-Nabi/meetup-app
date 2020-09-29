@@ -43,15 +43,12 @@ export default {
   width: 100vw;
   height: 100vh;
   background: no-repeat center center/cover;
-
   .item-containers {
     margin-left: 30px;
     margin: 100px;
-
     .back-btn {
       margin: 10px;
     }
-
     .back-btn,
     #attend {
       border: 0;
@@ -69,14 +66,12 @@ export default {
       text-transform: uppercase;
       transition: all 0.4s ease;
       background: rgb(10, 6, 6);
-
       &:hover {
         transition: 0.7s;
         border-radius: 30px 0px 30px 0px;
       }
     }
   }
-
   .card-date {
     padding: 30px;
     display: block;
@@ -84,25 +79,21 @@ export default {
     color: #aa8817;
     margin-left: -20px;
   }
-
   .title-text {
     display: block;
     font-size: 1.7rem;
     margin-top: -23px;
     font-weight: bolder;
   }
-
   .name {
     padding: 10px;
     display: block;
-
     span {
       display: block;
       font-weight: bold;
       color: #aa8817;
     }
   }
-
   img {
     width: 40%;
     margin-top: 10px;
@@ -112,7 +103,6 @@ export default {
     font-weight: bold;
     font-size: 1.4rem;
   }
-
   .details-text {
     width: 40%;
     display: block;
@@ -121,10 +111,8 @@ export default {
     letter-spacing: 1px;
     margin-bottom: 80px;
   }
-
   .attendees {
     margin-top: 5px;
-
     span {
       font-weight: bolder;
     }
