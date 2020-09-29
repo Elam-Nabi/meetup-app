@@ -3,6 +3,7 @@
     <h1 class="event-text">Events in Stockholm, SE</h1>
     <section>
       <div
+        class="cards-firstpage"
         v-for="event in events"
         :key="event.id"
         @click="
@@ -43,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 h1 {
   margin: 10px;
   color: #000;
@@ -59,7 +60,7 @@ section {
   margin: auto;
   display: grid;
 
-  div {
+  .cards-firstpage {
     cursor: pointer;
     transition: all 0.4s ease;
 

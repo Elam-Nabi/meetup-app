@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import MeetupCreate from '@/views/MeetupCreate.vue'
+import MeetupCard from '@/views/MeetupCard.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -18,11 +18,11 @@ const store = new Vuex.Store({
     }
 })
 
-describe('MeetupCreate', () => {
+describe('MeetupCard', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = shallowMount(MeetupCreate, {
+        wrapper = shallowMount(MeetupCard, {
             store,
             localVue,
             propsData: {
@@ -35,7 +35,7 @@ describe('MeetupCreate', () => {
     });
 
     test('Should check if component exist', () => {
-        expect(wrapper.findComponent(MeetupCreate).exists()).toBe(true)
+        expect(wrapper.findComponent(MeetupCard).exists()).toBe(true)
     })
 
     test('should check if props is set in component', async () => {
