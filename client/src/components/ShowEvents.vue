@@ -35,7 +35,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get("http://localhost:5000/meetups");
+      const res = await axios.get("/meetups");
       this.events = res.data;
     } catch (error) {
       this.error = "Something went wrong!";
